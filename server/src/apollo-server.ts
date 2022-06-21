@@ -29,7 +29,7 @@ export async function createApolloServer(
     context: (): TwitterResolverContext => ({
       db,
       dbTweetCache: {},
-      dbTweetCacheFavouriteCountMap: {},
+      dbTweetToFavoriteCountMap: {},
       dbUserCache: {},
     }),
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
