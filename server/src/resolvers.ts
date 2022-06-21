@@ -1,7 +1,13 @@
 import Query from './resolvers/Query';
+import { Resolvers } from './resolvers-types.generated';
+import Db from './db';
 
-const resolvers = {
-  Query
+export interface TwitterResolverContext {
+  db: Db;
+}
+
+const resolvers: Resolvers<TwitterResolverContext> = {
+  Query,
 };
 
 export default resolvers;
