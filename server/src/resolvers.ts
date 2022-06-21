@@ -5,7 +5,7 @@ import Db, { DbTweet, DbUser } from './db';
 export interface TwitterResolverContext {
   db: Db;
   dbTweetCache: Record<string, DbTweet>;
-  dbTweetCacheFavouriteCountMap: Record<string, number>;
+  dbTweetToFavoriteCountMap: Record<string, number>;
   dbUserCache: Record<string, DbUser>;
 }
 
